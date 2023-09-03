@@ -1,39 +1,23 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-		</style>
-	</head>
-	<body>
-		<script src="js/three.js"></script>
-		<script>
-			const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
-
-			const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
-
-			camera.position.z = 5;
-
-			function animate() {
-				requestAnimationFrame( animate );
-
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
-
-				renderer.render( scene, camera );
-			};
-
-			animate();
-		</script>
-	</body>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+    </head>
+    <body >
+        <div class="container-fluid">
+            <div class="row vh-100">
+                <div class="col-sm-6 d-flex flex-row justify-content-center">
+                    <div class="align-self-center">
+                        <h1 class="animate__animated animate__fadeinleft">Hey there 👋</h1>
+                        <h1 class="animate__animated animate__fadeInUp animate__delay-1s">I'm Trent!</h1>
+                    </div>
+                </div>
+                <div class="col-sm-6 vh-md-100 vh-20" style="background-image: url(/images/headshot.jpeg);background-position: center; background-size:cover">
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
